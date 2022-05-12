@@ -1,0 +1,14 @@
+{
+    "name": "mvc/framework",
+    "description": "mvc framework",
+    "license": "MIT",
+    "type": "framework",
+    "require": {
+        "php": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    }
+}
