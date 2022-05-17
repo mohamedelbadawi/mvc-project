@@ -4,15 +4,17 @@ namespace app\controllers;
 
 use app\core\controller;
 use app\core\DB;
+use app\models\User;
 
 class userController extends controller
 {
 
     public function index()
     {
-        $db = new DB();
-        $db->insert("users", ['name' => 'Mohamed', 'email' => 'mohamed@gmail.com', 'password' => '10101010']);
-        $this->view("home");
+        $user = new User();
+        // $user->updateUser(['id'=>1,'name'=>'badawi']);
+
+        $this->view("home", ['name' => "Mohamed"]);
     }
     public function update()
     {
@@ -22,6 +24,6 @@ class userController extends controller
     public function delete()
     {
         $db = new DB();
-        print_r($db->select("users",['id'=>2]));
+        print_r($db->select("users", ['id' => 2]));
     }
 }

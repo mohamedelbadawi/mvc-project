@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Mohamed</h1>
+    <h1><?php echo $name; ?></h1>
 </body>
 
 </html>
